@@ -1,0 +1,9 @@
+transformers==4.10.2
+PyYAML==5.3.1
+typing==3.6.6
+motor==2.5.1
+fastapi[all]==0.63.0
+python-multipart==0.0.5
+spacy==2.3.4
+uvicorn==0.13.4
+pytest

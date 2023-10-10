@@ -1,0 +1,38 @@
+text_classifier:
+  args:
+    task: "zero-shot-classification"
+    model_name: "typeform/distilbert-base-uncased-mnli"
+    categories: ['business','entertainment','politics','Sport' ,'Technology']
+
+text_ner:
+  args:
+    model_name: "en_core_web_sm"
+    entity_map: ['LOC', 'ORG', 'PERSON' ,'DATE']
+
+comment_generator:
+  args:
+    model_name: "snrspeaks/t5-one-line-summary"
+    number_of_beams: 5
+    number_of_sequences: 5
+    max_sequence_length: 50
+    repetition_penalty: 3.5
+    length_penalty: 2
+
+database:
+  enabled: true
+  no_sql:
+    db_engine: 'mongodb'
+    user: 'sibtain'
+    host: '0.0.0.0'
+    port: '27017'
+    db_name: 'aiDB'
+    collection: 'comments'
+
+rest_api:
+  host: 'localhost'
+  port: '8000'
+
+
+
+
+
